@@ -217,17 +217,23 @@ Useful for a many development paths:
 - operational overhead
 
 Note:
+
 Slow:
+
 About 20 times slower than C/C++ for first draft algorithms
 - don't be intimidated, most math calculations can be done using
 high performance libraries (numpy)
 - pypy (a custom python interpreter) is > 8 times faster than standard
 python
+
 Concurrency:
+
 - historically hard to create use more than 1 CPU
 - got much better in the last decade
 - other languages had (and some still have) the same issues
+
 Operational:
+
 - the python library is pretty big (40 mb)
 - a medium sized project can easily install 0.5 gb of dependencies
 - solvable issues, but you need to keep them in mind
