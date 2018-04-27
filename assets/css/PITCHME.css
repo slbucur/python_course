@@ -7,11 +7,11 @@
 
 body {
   /* fallback for old browsers */
-  background: #0575E6;
+  background: #eaebff;
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(to right, #4c67ff, #eaebff);
+  background: -webkit-linear-gradient(to right, #abdeff, #eaebff);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(to right, #4c67ff, #eaebff);
+  background: linear-gradient(to right, #abdeff, #eaebff);
 }
 
 .reveal pre {
