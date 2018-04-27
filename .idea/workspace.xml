@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="71842464-b706-4118-81c0-1d95d3132a2d" name="Default" comment="Change PITCH background yet again.">
+    <list default="true" id="71842464-b706-4118-81c0-1d95d3132a2d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PITCHME.md" beforeDir="false" afterPath="$PROJECT_DIR$/PITCHME.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PITCHME.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/PITCHME.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/PITCHME.codemax.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/PITCHME.codemax.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/PITCHME.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/PITCHME.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +18,36 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="5" selection-start-column="5" selection-end-column="5" />
+            <state relative-caret-position="18">
+              <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PITCHME.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PITCHME/assets/md/PITCHME.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="458">
+                <caret line="360" lean-forward="true" selection-start-line="85" selection-end-line="360" />
+              </first_editor>
+              <second_editor>
+                <js_state />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PITCHME2.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PITCHME/assets/jquery/PITCHME2.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="306">
+                <caret line="62" column="65" lean-forward="true" selection-start-line="60" selection-end-line="62" selection-end-column="65" />
+              </first_editor>
+              <second_editor>
+                <js_state />
+              </second_editor>
             </state>
           </provider>
         </entry>
@@ -30,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/assets/css/PITCHME.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="133">
-              <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -38,9 +64,9 @@
       <file leaf-file-name="PITCHME.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PITCHME.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="138">
-                <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="75">
+                <caret line="342" column="12" lean-forward="true" selection-start-line="342" selection-start-column="12" selection-end-line="342" selection-end-column="12" />
               </first_editor>
               <second_editor>
                 <js_state />
@@ -52,17 +78,22 @@
       <file leaf-file-name="PITCHME.yaml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PITCHME.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+            <state relative-caret-position="144">
+              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="adjuster.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PITCHME/assets/js/adjuster.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="PITCHME.codemax.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/PITCHME.codemax.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="94">
-              <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -79,7 +110,11 @@
       <find>logo</find>
       <find>log</find>
       <find>background</find>
+      <find>&lt;!-- .element: class=&quot;fragment&quot; --&gt;</find>
     </findStrings>
+    <replaceStrings>
+      <replace>|</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -87,10 +122,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/assets/css/PITCHME.css" />
         <option value="$PROJECT_DIR$/assets/css/PITCHME.codemax.css" />
         <option value="$PROJECT_DIR$/PITCHME.yaml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/PITCHME/assets/md/PITCHME.md" />
         <option value="$PROJECT_DIR$/PITCHME.md" />
       </list>
     </option>
@@ -138,6 +174,24 @@
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="image" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="python_course" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_course" type="462c0819:PsiDirectoryNode" />
+              <item name="PITCHME" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_course" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_course" type="462c0819:PsiDirectoryNode" />
+              <item name="PITCHME" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_course" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_course" type="462c0819:PsiDirectoryNode" />
+              <item name="PITCHME" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="md" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -156,6 +210,7 @@
       <recent name="$PROJECT_DIR$/assets/image" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/PITCHME/assets/jquery" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/assets/css" />
     </key>
@@ -197,7 +252,21 @@
       <option name="project" value="LOCAL" />
       <updated>1524821545279</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Change theme to 'sky'.&#10;Added first two slides.">
+      <created>1524823774901</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1524823774901</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added more slides.">
+      <created>1524826250262</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1524826250262</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -209,10 +278,10 @@
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Python Console" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32936078" />
       <window_info anchor="right" id="Jenkins" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2497332" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2497332" />
       <window_info anchor="bottom" id="Docker" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="SciView" />
@@ -238,16 +307,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added .gitignore and remove .idea folder.&#10;Changed PITCH background and logo." />
     <MESSAGE value="Change PITCH background yet again." />
-    <option name="LAST_COMMIT_MESSAGE" value="Change PITCH background yet again." />
+    <MESSAGE value="Change theme to 'sky'.&#10;Added first two slides." />
+    <MESSAGE value="Added more slides." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more slides." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/image/logo.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -257,29 +321,63 @@
     <entry file="file://$PROJECT_DIR$/assets/css/PITCHME.codemax.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="94">
-          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PITCHME.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        <state relative-caret-position="144">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PITCHME/assets/js/adjuster.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/PITCHME.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
-          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PITCHME/assets/jquery/PITCHME2.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="306">
+            <caret line="62" column="65" lean-forward="true" selection-start-line="60" selection-end-line="62" selection-end-column="65" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PITCHME/assets/md/PITCHME.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="458">
+            <caret line="360" lean-forward="true" selection-start-line="85" selection-end-line="360" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PITCHME.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="138">
-            <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="75">
+            <caret line="342" column="12" lean-forward="true" selection-start-line="342" selection-start-column="12" selection-end-line="342" selection-end-column="12" />
           </first_editor>
           <second_editor>
             <js_state />
