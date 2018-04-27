@@ -4,20 +4,36 @@
 
 ---
 
-## Template Features
+## Introduction
 
-- Code Presenting |
-- Repo Source, Static Blocks, GIST |
-- Custom CSS Styling |
-- Slideshow Background Image |
-- Slide-specific Background Images |
-- Custom Logo, TOC, and Footnotes |
+- Short course |
+- Very hands-on, project in every course |
+- Repetition, repetition, repetition |
 
----?code=sample/go/server.go&lang=golang&title=Golang File
+Note:
+This will be a short course, that covers the main features of python.
+We won't go into details, but we want you to get a solid understanding
+of the basics and where to look if you have questions (yes, you will
+become an expert python googler).
 
-@[1,3-6](Present code found within any repo source file.)
-@[8-18](Without ever leaving your slideshow.)
-@[19-28](Using GitPitch code-presenting with (optional) annotations.)
+In programming, practice is better than theory, so in every course
+we'll have a hands-on project.
+
+To learn something, you need to repeat it enough times that it becomes
+a part of your thought. This is why over the course we will use use
+the same concepts again and again in different contexts.
+
+---
+
+## Rules
+
+- Interactive course, you can ask me any question at any time |
+- No question is dumb question |
+
+Note:
+Since this is a hands on course, it's meant to be interactive.
+Ask me any question at any time.
+I mean it, no question is a dumb question
 
 ---
 
