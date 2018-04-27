@@ -273,8 +273,8 @@ Quite a lot going on, let's take it one by one.
 
 @[1](A list holding the tweets)
 @[2](A dictionary)
-@[6](Take an item for element of the list)
-@[7](Print the resulting tweet)
+@[7](Take an item for element of the list)
+@[8-9](Print the resulting tweet)
 
 ---
 
