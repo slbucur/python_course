@@ -1,16 +1,6 @@
-# Blue
+# Python course
 
-### A GitPitch Presentation Template
-
----
-
-## Tips!
-
-<br>
-
-@fa[arrows gp-tip](Press F to go Fullscreen)
-
-@fa[microphone gp-tip](Press S for Speaker Notes)
+### Introduction to Python @Cegeka
 
 ---
 
