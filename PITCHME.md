@@ -463,16 +463,7 @@ class int(object)
  |  int(x=0) -> int or long
  |  int(x, base=10) -> int or long
  |
- |  Convert a number or string to an integer, or return 0 if no arguments
- |  are given.  If x is floating point, the conversion truncates towards zero.
- |  If x is outside the integer range, the function returns a long instead.
- |
- |  If x is not a number or if base is given, then x must be a string or
- |  Unicode object representing an integer literal in the given base.  The
- |  literal can be preceded by '+' or '-' and be surrounded by whitespace.
- |  The base defaults to 10.  Valid bases are 0 and 2-36.  Base 0 means to
- |  interpret the base from the string as an integer literal.
- |  >>> int('0b100', base=0)
+ ...
  |  4
  |
  |  Methods defined here:
@@ -500,157 +491,6 @@ class int(object)
  |
  |  __float__(...)
  |      x.__float__() <==> float(x)
- |
- |  __floordiv__(...)
- |      x.__floordiv__(y) <==> x//y
- |
- |  __format__(...)
- |
- |  __getattribute__(...)
- |      x.__getattribute__('name') <==> x.name
- |
- |  __getnewargs__(...)
- |
- |  __hash__(...)
- |      x.__hash__() <==> hash(x)
- |
- |  __hex__(...)
- |      x.__hex__() <==> hex(x)
- |
- |  __index__(...)
- |      x[y:z] <==> x[y.__index__():z.__index__()]
- |
- |  __int__(...)
- |      x.__int__() <==> int(x)
- |
- |  __invert__(...)
- |      x.__invert__() <==> ~x
- |
- |  __long__(...)
- |      x.__long__() <==> long(x)
- |
- |  __lshift__(...)
- |      x.__lshift__(y) <==> x<<y
- |
- |  __mod__(...)
- |      x.__mod__(y) <==> x%y
- |
- |  __mul__(...)
- |      x.__mul__(y) <==> x*y
- |
- |  __neg__(...)
- |      x.__neg__() <==> -x
- |
- |  __nonzero__(...)
- |      x.__nonzero__() <==> x != 0
- |
- |  __oct__(...)
- |      x.__oct__() <==> oct(x)
- |
- |  __or__(...)
- |      x.__or__(y) <==> x|y
- |
- |  __pos__(...)
- |      x.__pos__() <==> +x
- |
- |  __pow__(...)
- |      x.__pow__(y[, z]) <==> pow(x, y[, z])
- |
- |  __radd__(...)
- |      x.__radd__(y) <==> y+x
- |
- |  __rand__(...)
- |      x.__rand__(y) <==> y&x
- |
- |  __rdiv__(...)
- |      x.__rdiv__(y) <==> y/x
- |
- |  __rdivmod__(...)
- |      x.__rdivmod__(y) <==> divmod(y, x)
- |
- |  __repr__(...)
- |      x.__repr__() <==> repr(x)
- |
- |  __rfloordiv__(...)
- |      x.__rfloordiv__(y) <==> y//x
- |
- |  __rlshift__(...)
- |      x.__rlshift__(y) <==> y<<x
- |
- |  __rmod__(...)
- |      x.__rmod__(y) <==> y%x
- |
- |  __rmul__(...)
- |      x.__rmul__(y) <==> y*x
- |
- |  __ror__(...)
- |      x.__ror__(y) <==> y|x
- |
- |  __rpow__(...)
- |      y.__rpow__(x[, z]) <==> pow(x, y[, z])
- |
- |  __rrshift__(...)
- |      x.__rrshift__(y) <==> y>>x
- |
- |  __rshift__(...)
- |      x.__rshift__(y) <==> x>>y
- |
- |  __rsub__(...)
- |      x.__rsub__(y) <==> y-x
- |
- |  __rtruediv__(...)
- |      x.__rtruediv__(y) <==> y/x
- |
- |  __rxor__(...)
- |      x.__rxor__(y) <==> y^x
- |
- |  __str__(...)
- |      x.__str__() <==> str(x)
- |
- |  __sub__(...)
- |      x.__sub__(y) <==> x-y
- |
- |  __truediv__(...)
- |      x.__truediv__(y) <==> x/y
- |
- |  __trunc__(...)
- |      Truncating an Integral returns itself.
- |
- |  __xor__(...)
- |      x.__xor__(y) <==> x^y
- |
- |  bit_length(...)
- |      int.bit_length() -> int
- |
- |      Number of bits necessary to represent self in binary.
- |      >>> bin(37)
- |      '0b100101'
- |      >>> (37).bit_length()
- |      6
- |
- |  conjugate(...)
- |      Returns self, the complex conjugate of any int.
- |
- |  ----------------------------------------------------------------------
- |  Data descriptors defined here:
- |
- |  denominator
- |      the denominator of a rational number in lowest terms
- |
- |  imag
- |      the imaginary part of a complex number
- |
- |  numerator
- |      the numerator of a rational number in lowest terms
- |
- |  real
- |      the real part of a complex number
- |
- |  ----------------------------------------------------------------------
- |  Data and other attributes defined here:
- |
- |  __new__ = <built-in method __new__ of type object>
- |      T.__new__(S, ...) -> a new object with type S, a subtype of T
 ```
 
 ---
@@ -961,12 +801,11 @@ print('The item costs %.2f dollars' % price)
 ```
 
 
-----
+---
 
 #### Back to loops
 
 ```python
-
 # multiplying board
 
 for x in range(4):
@@ -975,11 +814,237 @@ for x in range(4):
 ```
 
 This might be useful to visualize:
-Go to http://www.pythontutor.com/visualize.html#mode=edit and copy
+Go to http://www.pythontutor.com/visualize.html and copy
 the code.
 
 Note:
 You see what we did there? Multiple indentations.
 
 ---
+
+#### While
+
+While loops the code as long as the condition is `True`
+
+```
+#    \___/    -> soup plate
+#   *-----*   -> small plate
+#  *-------*  -> big plate
+
+plates = ['soup plate', 'small plate', 'big plate']
+
+no_plates = len(plates)
+while no_plates > 0:
+    next_plate = plates.pop(0)
+    print(next_plate)
+    no_plates = len(plates)
+```
+
+Try this this in the [visualizer](http://www.pythontutor.com/visualize.html)
+
+Note:
+
+ASCII art is your friend.
+This structure is a stack. It's the basis of a python program.
+
+---
+
+#### When to use `while`?
+
+While is more powerful than a for, but you usually need more lines
+of code to use it.
+
+```
+fruits = ['banana', 'strawberry', 'plum', 'coconut']
+
+# with while
+index = 0
+while index < len(fruits):
+    fruit = fruits[index]
+    print('I like the fruit named {}'.format(fruit))
+
+# with for
+for fruit in fruits:
+    print('I like the fruit named {}'.format(fruit))
+
+```
+
+---
+
+### List comprehensions
+
+A powerful way to manipulate lists in python.
+Easier than for for simple things.
+
+* Access items from a list
+
+```python
+fruits = ['🍌', '🍓', '🍏', '🍐']
+
+# indexing starts at 0
+print(fruits[0]) # first item 🍌
+print(fruits[2]) # third item
+print(fruits[-1]) # last item
+
+print(fruits[:2]) # first two items
+print(fruits[1:3]) # 2nd and 3rd item
+print(fruits[-2:]) # last two items
+```
+---
+
+* Make another list
+
+```python
+fruits = ['🍌', '🍓', '🍏', '🍐']
+# 'a' * 4 = 'aaaa'
+fruit_packs = [ fruit * 3 for fruit in fruits]
+
+print(fruit_packs)
+```
+
+* Filter a list
+
+```python
+fruits = ['🍌', '🍓', '🍏', '🍐', '🍺', '🍷']
+not_actually_fruits = ['🍺', '🍷']
+
+actual_fruits = [
+    fruit
+    for fruit in fruits
+    if fruit not in not_actually_fruits
+]
+```
+
+Note:
+Multiplying a string by a number will duplicate that string.
+
+As you can see, the filtering gets a bit complicated.
+If the code seems unreadable, don't be afraid to use a proper for.
+
+---
+
+
+#### Functions
+
+Functions are ways to couple common logic in a single
+ abstraction.
+
+You have already seen them in the last slides.
+
+* `print`
+* `len`
+* `pop` (actually a method)
+
+Note:
+We'll get to methods soon enough.
+
+---
+
+How to use a function?
+You use `<function_name>(argument1, argument2, ...)`
+
+You will also see this quite often:
+```python
+function_name(*args, **kwargs)
+```
+
+---
+
+##### Args - Arguments
+
+* also called positional
+* the order of the arguments matters
+```python
+print('This is positional argument 1', 'This is positional argument 2')
+```
+
+**print** will take all positional arguments and join them with a
+ **space**.
+
+---
+
+##### Kwargs - Keyword arguments
+
+
+```python
+print('Positional argument 1', 'Positional argument 2', sep=',')
+```
+
+The **sep** is a keyword argument. It specifies that **print** will
+ separate the positional arguments with **,** instead of **space**.
+
+Note:
+
+As you can see, you invoke a keyword argument by using
+ `argument_name=argument_value`.
+
+---
+
+#### Make your own functions
+
+#### With positional
+
+```python
+def check_fruit(fruit):
+    if fruit not in ('🍺', '🍷'):
+        print(f'{} is a fruit')
+    else:
+        print(f'{fruit} is not a fruit')
+
+fruits = ['🍌', '🍓', '🍏', '🍐', '🍺', '🍷']
+
+for fruit in fruits:
+    check_fruit(fruit)
+```
+
+
+---
+
+#### With positional and keyword
+
+```python
+def check_fruit(fruit, bad_fruits=('🍺', '🍷')):
+    if fruit not in :
+        print(f'{} is a fruit')
+    else:
+        print(f'{fruit} is not a fruit')
+
+fruits = ['🍌', '🍓', '🍏', '🍐', '🍺', '🍷', '🌎']
+
+# which is right?
+for fruit in fruits:
+    check_fruit(fruit)
+
+for fruit in fruits:
+    check_fruit(fruit, bad_fruits=('🍺', '🍷', '🌎'))
+```
+
+Note:
+Here we have a second parameter for bad_fruits.
+The parameter has a default value with the bad_fruit list from the
+previous slide, but that can be changed by the caller of the function.
+
+As you can see, it's useful, because we have an extra bad fruit (🌎)
+in our list.
+
+---
+
+#### Let's return to the hash tag snippet
+
+```python
+def send_tweets():
+    tweets = [
+        {'message': 'I love exotic fruits', 'hastag': '#mango'},
+        {'message': 'Local foods are the best', 'hastag': '#pear'},
+        {'message': 'Why not vegetables', 'hastag': '#celery'}
+    ]
+
+    for tweet in tweets:
+        print('Sending tweet:')
+        print('{} {}'.format(tweet['messsage'], tweet['hashtag']))
+
+send_tweets()
+```
+
+Tell me if you have questions about it ❓.
 
