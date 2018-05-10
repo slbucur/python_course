@@ -5,9 +5,9 @@
 
 ## Introduction
 
-- Short course  |
-- Very hands-on, project in every course  |
-- Repetition, repetition, repetition  |
+- Short course  <!-- .element: class="fragment" -->
+- Very hands-on, project in every course  <!-- .element: class="fragment" -->
+- Repetition, repetition, repetition  <!-- .element: class="fragment" -->
 
 Note:
 This will be a short course, that covers the main features of python.
@@ -26,8 +26,8 @@ the same concepts again and again in different contexts.
 
 ## Rules
 
-- Interactive course, you can ask me any question at any time  |
-- No question is a dumb question  |
+- Interactive course, you can ask me any question at any time  <!-- .element: class="fragment" -->
+- No question is a dumb question  <!-- .element: class="fragment" -->
 
 Note:
 Since this is a hands on course, it's meant to be interactive.
@@ -217,23 +217,17 @@ Useful for a many development paths:
 - operational overhead
 
 Note:
-
 Slow:
-
 About 20 times slower than C/C++ for first draft algorithms
 - don't be intimidated, most math calculations can be done using
 high performance libraries (numpy)
 - pypy (a custom python interpreter) is > 8 times faster than standard
 python
-
 Concurrency:
-
 - historically hard to create use more than 1 CPU
 - got much better in the last decade
 - other languages had (and some still have) the same issues
-
 Operational:
-
 - the python library is pretty big (40 mb)
 - a medium sized project can easily install 0.5 gb of dependencies
 - solvable issues, but you need to keep them in mind
@@ -258,14 +252,14 @@ You can call almost any library and interact
 
 ```python
 tweets = [
-    {'message': 'I love exotic fruits', 'hastag': '#mango'},
-    {'message': 'Local foods are the best', 'hastag': '#pear'},
-    {'message': 'Why not vegetables', 'hastag': '#celery'}
+    {'message': 'I love exotic fruits', 'hashtag': '#mango'},
+    {'message': 'Local foods are the best', 'hashtag': '#pear'},
+    {'message': 'Why not vegetables', 'hashtag': '#celery'}
 ]
 
 for tweet in tweets:
     print('Sending tweet:')
-    print('{} {}'.format(tweet['messsage'], tweet['hashtag']))
+    print('{} {}'.format(tweet['message'], tweet['hashtag']))
 
 ```
 
@@ -273,8 +267,8 @@ Quite a lot going on, let's take it one by one.
 
 @[1](A list holding the tweets)
 @[2](A dictionary)
-@[7](Take an item for element of the list)
-@[8-9](Print the resulting tweet)
+@[6](Take an item for element of the list)
+@[7](Print the resulting tweet)
 
 ---
 
@@ -282,16 +276,66 @@ Confused? Don't worry, we'll start with the basics.
 
 ---
 
-Go to {url} and you will be able to use python in the browser.
+Go to https://github.com/slbucur/python_course.
 
-All materials are available at https://github.com/slbucur/python_course
+Here you should see a launcher button
 
-Copy paste this snipped in the browser and run it.
+![launch](http://mybinder.org/badge.svg)
+
+Click on it :).
 
 What do you see?
 
 ---
 
+### Jupyterlab
+
+* An Integrated Development Environment (IDE) available in your browser
+* Allows you to easily run Python code in your browser
+* Other languages are supported as well, which makes it easy to
+experiment with them
+
+---
+
+### Binder.org
+
+* An platform that lets you create Jupyterlab instances in the cloud, for free
+* The instances are limited in terms of compute power, but it's nice for quick experiments
+* In the next course we'll learn how to do run Jupyterlab locally
+
+---
+
+### Jupyter notebooks
+
+* An interactive way to run code in the browser
+* Very useful for data analysis and one-off code snippets
+* Let's create one now:
+![jupyter-1](assets/jupyterlab-1.png)
+---
+
+* Copy paste the code in the first cell
+![jupyter-1](assets/jupyterlab-notebook.png)
+
+* Run with `Ctrl + Enter` or the ▶️ button above
+
+---
+
+### Support code
+
+* You will find the support for the first course in the
+ `code` folder
+* just click on the folder and open course_notebook_1.ipynb
+
+---
+
+### Python basics
+
+* Variables
+* Objects
+* Control flow
+* Functions
+
+---
 ## Variables
 - simple ones: string, int, float
 
@@ -987,7 +1031,7 @@ As you can see, you invoke a keyword argument by using
 ```python
 def check_fruit(fruit):
     if fruit not in ('🍺', '🍷'):
-        print(f'{} is a fruit')
+        print(f'{fruit} is a fruit')
     else:
         print(f'{fruit} is not a fruit')
 
@@ -1005,7 +1049,7 @@ for fruit in fruits:
 ```python
 def check_fruit(fruit, bad_fruits=('🍺', '🍷')):
     if fruit not in :
-        print(f'{} is a fruit')
+        print(f'{fruit} is a fruit')
     else:
         print(f'{fruit} is not a fruit')
 
@@ -1047,4 +1091,175 @@ send_tweets()
 ```
 
 Tell me if you have questions about it ❓.
+
+---
+
+### Homework
+
+Next time we'll install python and external libraries using pip.
+Try to do it yourselves.
+
+* Go to [python.org](https://www.python.org/downloads/release/python-365/)
+* Download the Windows executable [installer](https://www.python.org/ftp/python/3.6.5/python-3.6.5-amd64.exe)
+* This will install `python` and `pip`
+* Install [cmder](http://cmder.net/) - full version (much better than cmd)
+* Open cmder as Administrator
+---
+
+* Go to your Desktop
+```bash
+cd C:\Users\<your_user_name>\Desktop
+```
+* Make a projects directory, and a python_course folder
+```bash
+mkdir projects
+cd projects
+mkdir python_course
+cd python_course
+```
+
+---
+
+* Install `pipenv`
+```bash
+pip install pipenv
+```
+* Install `jupyterlab`
+```bash
+pipenv install jupyterlab
+pipenv shell
+```
+
+* Run it
+```bash
+jupyter lab
+```
+
+Bravo 🐍!
+
+(If it didn't work, don't worry, we'll cover everything next time).
+
+---
+
+### Homework 2
+
+* Try to do the python tutorial on [python.org](https://docs.python.org/3/tutorial/)
+* To learn something, make it a daily habit:
+  * If you struggle with programming concepts, try a game like Coding Planets
+  (On [Android](https://play.google.com/store/apps/details?id=com.material.design.codingplanet&hl=en))
+  or The Human Resource Machine (Windows, IOS and Android)
+  * For daily questions, **SoloLearn** and **Enky**
+
+---
+
+* If you're really determined, try the:
+ [Python Bootcamp](https://www.udemy.com/complete-python-bootcamp/) on Udemy
+  * You should be able to get it at 10$
+  * You should probably do it after this course 😊
+
+---
+
+## Course 2
+### Using external libraries
+
+---
+
+* Local python installation
+* Maybe some git
+* Python style guide
+* Object oriented programming (basics)
+* Using external libraries
+* Bonus - git
+
+---
+
+How did `Homework 1` go?
+Let's take it [step by step](#/65).
+
+---
+
+#### What is Python (the executable).
+
+* It's the standard python interpreter.
+
+* When you install it, it appends your `%PATH%` variable, so you will have
+it available everywhere in the shell.
+
+---
+
+This executable:
+* interprets and executes python instructions from python files
+* conceptually it's a virtual machine, because it abstracts the
+underlying hardware and software to some basic programming concepts
+* python has it's own internal operations called Operation Codes
+(OPCodes)
+
+---
+
+### Virtual environments
+
+* An isolated python instance where you
+ can install dependencies without affecting the global python
+ installation
+* This way you can have separate dependencies (external libraries)
+for every project
+
+---
+
+### Pipenv
+
+* Pipenv is a library that makes it very easy to work with virtual
+environments
+
+* create a new directory an change the directory into it
+```bash
+mkdir project_name
+cd project_name
+```
+
+* initialize pipenv
+```bash
+pipenv install
+```
+
+---
+
+
+* Right now we are still using the global python installation
+```
+which python
+```
+
+* Change to the virtual environment
+```
+pipenv shell
+```
+
+* The python installation has changed
+```
+which python
+```
+
+---
+
+* If you look around, you'll see two files:
+  * Pipfile
+  * Pipfile.lock
+* Let's look at them for a little
+
+Note:
+The Pipfile is straightforward, with just two dependencies: 
+* jupyterlab
+* requests
+
+If we look in the Pipfile.lock, thogh, we can see all 
+the complexity hidden from us.
+
+Jupyterlab depends on many other libraries, 
+and they are all here.
+
+---
+
+
+
 
