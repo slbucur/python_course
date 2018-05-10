@@ -1,5 +1,7 @@
 # Python fundamentals course
 
+[![Binder](http://mybinder.org/badge.svg)](https://hub.mybinder.org/user/slbucur-python_course-di9qv0ro/lab#)
+
 The internal python course held @Cegeka.
 
 In this repository you will find:
@@ -8,12 +10,23 @@ In this repository you will find:
 * the jupyer notebooks in the `code` folder, as `.ipynb` files
 * the python files in the `code` folder, as `.py` files
 
+## Cloud installation
+
+We have set up a cloud installation at binder.com .
+
+This takes a github repository and creates a server running jupyerlab with it.
+
+It's not suitable for intensive work, but it helps you get around quickly.
+
+Just click on the launch binder button on top, or go to this 
+[url](https://hub.mybinder.org/user/slbucur-python_course-di9qv0ro/lab#).
+
 ## Local installation
 To run the assets locally, the recommended path through a virtual environment.
 This is an isolated python environment where you can play around without affecting
 the global python installation.
 
-1.Find a python distribution suited for you
+### 1. Find a python distribution suited for you
 
 For `windows`:
 
@@ -32,7 +45,7 @@ For `linux`:
 apt-get install python3.6
 ```
 
-2. Download the project locally
+### 2. Download the project locally
 
 Using git (recommended):
 * open a terminal window
@@ -52,7 +65,7 @@ Using zip:
 * download using this [url](https://github.com/slbucur/python_course/archive/master.zip)
 * unzip it where you want it
 
-3. Instantiate a new virtualenv
+### 3. Instantiate a new virtualenv
 
 * open a terminal window and cd to the folder you just created
   * on windows, it's easy with `Shift + Right Click` -> open cmd here
@@ -66,3 +79,4 @@ Using zip:
 * `jupyter lab`
 
 ### Good job 😉
+
