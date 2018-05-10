@@ -1,6 +1,6 @@
 # Python fundamentals course
 
-[![Binder](http://mybinder.org/badge.svg)](https://hub.mybinder.org/user/slbucur-python_course-di9qv0ro/lab#)
+[![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/slbucur/python_course.git/master?urlpath=lab/)
 
 The internal python course held @Cegeka.
 
@@ -19,7 +19,7 @@ This takes a github repository and creates a server running jupyerlab with it.
 It's not suitable for intensive work, but it helps you get around quickly.
 
 Just click on the launch binder button on top, or go to this 
-[url](https://hub.mybinder.org/user/slbucur-python_course-di9qv0ro/lab#).
+[url](http://mybinder.org/v2/gh/slbucur/python_course.git/master?urlpath=lab/).
 
 ## Local installation
 To run the assets locally, the recommended path through a virtual environment.
