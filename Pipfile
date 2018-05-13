@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 jupyterlab = "*"
 requests = "*"
+python-twitter = "*"
+openpyxl = "*"
 
 [dev-packages]
 

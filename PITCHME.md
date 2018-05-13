@@ -310,11 +310,11 @@ experiment with them
 * An interactive way to run code in the browser
 * Very useful for data analysis and one-off code snippets
 * Let's create one now:
-![jupyter-1](assets/jupyterlab-1.png)
+![jupyter-1](./assets/md/assets/jupyterlab-1.png)
 ---
 
 * Copy paste the code in the first cell
-![jupyter-1](assets/jupyterlab-notebook.png)
+![jupyter-1](./assets/md/assets/jupyterlab-notebook.png)
 
 * Run with `Ctrl + Enter` or the ▶️ button above
 
@@ -870,7 +870,7 @@ You see what we did there? Multiple indentations.
 
 While loops the code as long as the condition is `True`
 
-```
+```python
 #    \___/    -> soup plate
 #   *-----*   -> small plate
 #  *-------*  -> big plate
@@ -1073,6 +1073,60 @@ in our list.
 
 ---
 
+### return
+
+* **return** is used to return a value
+
+```python
+def check_fruit(fruit, bad_fruits=('🍺', '🍷', '🌎')):
+    if fruit not in bad_fruits:
+        return True
+    else:
+        return False
+
+fruits = ['🍌', '🍓', '🍏', '🍐', '🍺', '🍷', '🌎']
+
+# which is right?
+for fruit in fruits:
+    is_fruit = check_fruit(fruit)
+    if is_fruit:
+        print(f'{fruit} is a fruit')
+    else:
+        print(f'{fruit} is not a fruit')
+
+```
+
+Note:
+
+* **return** is a pretty aptly named, right?
+
+---
+
+* **return** stops a function
+
+```python
+def get_fruit_name(searched_fruit):
+    print(f'Searching {searched_fruit}')
+    fruit_names = (
+       ('🍌', 'banana'),
+       ('🍓' , 'strawberry'),
+       ('🍏', 'apple')
+    )
+
+    for fruit, fruit_name in fruit_names:
+        if searched_fruit == fruit:
+            return fruit_name
+        else:
+            print(f'{fruit} is not {searched_fruit}')
+
+print(get_fruit_name('🍌'))
+print(get_fruit_name('🍓'))
+print(get_fruit_name('🍏'))
+
+```
+
+---
+
 #### Let's return to the hash tag snippet
 
 ```python
@@ -1243,8 +1297,8 @@ which python
 ---
 
 * If you look around, you'll see two files:
-  * Pipfile
-  * Pipfile.lock
+  * [Pipfile](https://github.com/slbucur/python_course/blob/master/Pipfile)
+  * [Pipfile.lock](https://github.com/slbucur/python_course/blob/master/Pipfile.lock)
 * Let's look at them for a little
 
 Note:
@@ -1259,6 +1313,502 @@ Jupyterlab depends on many other libraries,
 and they are all here.
 
 ---
+
+### Dependencies
+
+* External libraries that you can use in your own code
+* It's usually code written by other people that was open source
+* You already know one example:
+  * Jupyter
+
+---
+
+### [pypi.org](pypi.org)
+
+* Platform containing thousands of python projects
+* All projects are vetoed by the community
+* All packages here can be installed with **pip**
+
+---
+
+### Using dependencies
+
+* Let's install a library for doing http requests
+* It's called requests
+
+```bash
+pipenv install requests
+```
+
+---
+
+* Now let's open a notebook
+
+```python
+import requests
+response = requests.get('https://google.com')
+print(response.text)
+```
+* What do you see?
+
+---
+
+## Object oriented programming
+
+---
+
+### OOP
+
+* Recall the last course, about objects and properties
+* objects:
+  * hold data
+  * have properties
+
+* OOP allows us to have hierarchies of objects (Think parent-child).
+
+---
+
+* Let's create our own object
+
+```python
+
+class MyAwesomeObject():
+    def be_awesome(self):
+        print('😎')
+
+my_awesome_object = MyAwesomeObject()
+my_awesome_object.be_awesome()
+
+```
+
+---
+
+* A bit of complication
+
+```python
+class MyAwesomeObject():
+    been_awesome = 0
+    def be_awesome(self):
+        if self.been_awesome >= 5:
+            print("I've been awesome too many times")
+        else:
+            print('😎')
+            self.been_awesome += 1
+
+my_object = MyAwesomeObject()
+for i in range(7):
+    my_object.be_awesome()
+
+```
+
+---
+
+### Inheritance
+
+```python
+class Animal():
+    def __init__(self, sound):
+        self.sound = sound
+
+    def make_sound():
+        print(sound)
+
+class Cat(Animal):
+    def __init__(self):
+        super().__init__('Meow !')
+
+class Dog(Animal):
+    def __init(self):
+        super().__init__('Bark !')
+
+cat = Cat()
+dog = Dog()
+
+cat.make_sound()
+dog.make_sound()
+
+```
+Note:
+A small biological hierarchy.
+Both cats and dogs are animals and make sounds.
+The way they make sounds is the same (by printing to the console).
+Their sounds are different though:
+  * Bark for the dog
+  * Meow for the cat
+
+---
+
+### __init__
+
+* This is the method called when instantiating an object
+
+```python
+class MiniInteger():
+    def __init__(self):
+        self.state = 0
+    def increment():
+        self.state += 1
+        print(state)
+
+mini_int = MiniInteger()
+for i in range(4):
+    print mini_int.increment()
+
+```
+
+Note:
+
+Here we have a very small example of an integer.
+It can only increment.
+
+When we initialize it with MiniInteger(), the state
+initializes with 0.
+Then we can increase that state with 1 using 
+the MiniInteger.increment() function
+
+---
+
+### OOP - Conclusions
+
+* OOP is used extensively throughout python
+* It's not usually necessary to create your 
+own hierarchies
+* But it's important to know for using other libraries
+
+---
+
+### Exceptions
+
+* Exceptions are a classic example of OOP in python
+* When an exception is raised in the program the program stops
+* Unless the exception is caught in the code
+
+
+---
+
+### KeyboardInterrupt
+
+* Try this in an notebook. It will sleep forever.
+* To stop it, use the ⏹️ button
+* This will send a Ctrl+C to the program, and raise a KeyboardInterrupt exception
+
+```python
+from time import sleep
+while True:
+    sleep(1)
+```
+
+---
+
+### The stacktrace
+
+
+```python
+---------------------------------------------
+KeyboardInterrupt
+Traceback (most recent call last)
+<ipython-input-1-ecf9bc35922a> in <module>()
+      1 from time import sleep
+      2 while True:
+----> 3     sleep(1)
+
+KeyboardInterrupt: 
+```
+
+* Under normal python behavior, if an exception is not caught
+a stack trace will be displayed on the screen
+* This shows where the exception was encountered
+
+---
+
+### Another exception
+
+```python
+nr = 12
+divisors = [0, 1, 2, 3, 4, 6, 12]
+
+for divisor in divisors:
+    print(f'{nr} / {divisor} = {nr / divisor}')
+```
+
+---
+
+```python
+---------------------
+ZeroDivisionError
+Traceback (most recent call last)
+<ipython-input-8-e92e33772d17> in <module>()
+      3 
+      4 for divisor in divisors:
+----> 5     print(f'{nr} / {divisor} = {nr/divisor}')
+
+ZeroDivisionError: division by zero
+```
+
+---
+
+* Let's try to catch that
+
+```python
+nr = 12
+divisors = [0, 1, 2, 3, 4, 6, 12]
+
+for divisor in divisors:
+    try:
+        print(f'{nr} / {divisor} = {nr / divisor}')
+    except ZeroDivisionError:
+        print(f'Can\'t divide {nr} by 0')
+```
+
+Note:
+This works similar to an **if** block.
+
+Also notice the quote (`'`) escaping with `\`.
+Since the string is made with single quotes, we need to 
+escape the quotes inside the string.
+An alternative would have been `f"Can't divide {nr} by 0"`
+
+---
+### Try-except
+
+* Try-except works similar to an **if** block
+* You need to pass the type of exception you are catching in **except**
+
+```python
+try:
+    1 / 0
+except ZeroDivisionError:
+    print('To infinity and beyond!')
+```
+---
+
+### OOP in exceptions
+
+* All exceptions inherit from the **Exception** class
+* So this also works:
+
+```python
+try:
+    1 / 0
+except Exception as e:
+    print(type(e))
+    print(e)
+    print('To infinity and beyond')
+```
+
+---
+
+## The Exception class
+
+* if you want to catch any possible exception,
+use `except Exception`
+* it's recommended you don't do that, and manually
+set all exceptions you want to handle
+* otherwise it can be **very** hard to debug the code
+
+---
+
+### Our own exception
+
+```python
+class NotAnAppleError(Exception):
+    pass
+
+def process_apple(fruit):
+    if fruit != '🍏':
+        raise NotAnAppleError()
+
+    print('Making apple juice')
+fruits = ['🍏', '🍌', '🍓']
+
+for fruit in fruits:
+    process_apple(fruit)
+
+```
+
+Note:
+The `pass` keyword denotes that we don't want anything 
+but inheriting the class.
+
+Try to catch the exception so that the program 
+doesn't stop.
+
+---
+
+### The `pass` keyword
+
+* The `pass` keyword is used to not do anything.
+* It can be used a placeholder until actual code will
+be written
+
+```python
+apple = '🍏'
+fruit = '🍓'
+
+if fruit == apple:
+    pass
+else:
+    print(f'{fruit} is not an {apple}')
+```
+
+---
+
+## The python module system
+
+Two types of modules:
+* user modules
+* system modules
+    * python default modules
+    * external libraries
+
+---
+
+* default way of importing
+
+```python
+import time # a default python module
+
+print('Sleeping 10 seconds')
+time.sleep(10)
+```
+
+---
+
+* anther way of importing
+* imports only the needed function
+
+```python
+from time import sleep
+print('Sleeping 10 seconds')
+sleep(10) 
+
+```
+
+---
+
+* import everything from a module
+* usually not recommended
+
+```python
+import * from time
+sleep(10)
+```
+
+---
+
+### Your own modules
+
+
+* Go to the `code/module_parent` folder
+* Open the notebook
+* What do you see
+
+---
+
+* The python module system is based on directories
+* From python's point of view, directories that have
+an `__init__.py` file in them are considered modules
+
+---„
+
+### Importing from your own modules
+
+```
+from module1 import function1
+from nested.module2 import function2
+function1()
+function2()
+```
+
+---
+
+The file structure:
+
+```
+module_parent/
+├── __init__.py
+├── module1.py --> function1
+├── nested
+│   ├── __init__.py
+│   └── module2.py --> function2
+└── notebook.ipynb
+```
+
+Note:
+
+* Our notebook is in the top folder named `module_parent`.
+* This has an `__init__.py ` file, so `module_parent` is the top level module.
+* Another file, `module1`, is also a module
+  * so we can do `from module1 import function1`
+* A folder called `nested` is also here
+  * since it has an `__init__.py`, it's also a module
+  * since it has a file name `module2.py`
+    * we can do `from nested.module2 import function2`
+
+---
+
+### Gotchas regarding modules
+
+* try to do imports at the top of the module
+  * it's more readable that way
+* imports work related to the module where you call
+* For example, let's look at function3 in module3.
+
+```python
+from nested.module3 import function3
+function3()
+```
+
+Note:
+
+* `module3` calls `function1` from `module1`.
+* Works because you are calling the module from `module_parent`
+* If you try from the nested folder, for example, it will not work
+* Let's try that now, create a new notebook in the nested folder
+
+---
+
+### Hashtag version 2
+
+```python
+from twitter import Api
+api = Api(
+    consumer_key='zbSYdYSCgBp4AsobvCTFUEEHs',
+    consumer_secret='nmxH708nLYq6ajeEEGuM0GfuZ04QtU10xRrgBYWaSOZHDKbD9g',
+    access_token_key='994947930971885569-3PnJ7T76W85VaFke5qAijk9kDufVrz4',
+    access_token_secret='P0eq8EKTBD3Bn4OTOHXJ5viYp7D8IBiBlLy9t4TuVRIlU'
+)
+
+def get_tweets():
+    wb = load_workbook(EXCEL_FILE)
+    sheet = wb[EXCEL_SHEET]
+
+    tweets = []
+    header = {}
+    for i, row in enumerate(sheet.rows):
+        if i == 0:
+            for j, cell in enumerate(row):
+                header[j] = cell.value
+        else:
+            tweet = {}
+            for j, cell in enumerate(row):
+                tweet[header[j]] = cell.value
+            tweets.append(tweet)
+
+    return tweets
+
+def send_tweets():
+    tweets = get_tweets()
+    for tweet in tweets:
+        update = '{} {}'.format(tweet['message'], tweet['hashtag'])
+        print(f'Sending update {update}')
+        status = api.PostUpdate(update)
+        if status.code == 200:
+            print('Update sent successfully')
+
+send_tweets()
+
+```
 
 
 
