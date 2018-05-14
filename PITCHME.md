@@ -1824,3 +1824,173 @@ send_tweets()
 
 ---
 
+* Quite a lot going on, let's take it step by step.
+
+---
+
+### Twitter API
+
+* Twitter has a REST API which lets you:
+  * read tweets
+  * send tweets
+  * many more
+* A library was created to wrap this basic API: [python-twitter](https://python-twitter.readthedocs.io/en/latest/)
+
+---
+
+<iframe src="https://python-twitter.readthedocs.io/en/latest/" style="width:75vw; height:50vh">
+
+---
+
+To use the twitter API, you will need 3 things:
+* to import the library 
+```python
+import twitter
+```
+
+* to instantiate it
+```python
+api = twitter.Api(
+    consumer_key='', consumer_secret='',
+    access_token_key='', access_token_secret=''
+)
+```
+
+* to use it with `api.<method>`
+```python
+api.PostUpdate('Update text')
+```
+
+---
+
+### Secrets
+
+* To get the secrets, you'll need to set up a new App in twitter (and a user, maybe?)
+* Don't worry, one is already set up for you, [here](https://apps.twitter.com/app/15218341/keys)
+  * The user is * Sally WaffleLover*, we'll give you the credentials during the course 😉
+* If you want it for your own twitter user, follow this python-twitter 
+[page](https://python-twitter.readthedocs.io/en/latest/getting_started.html), 
+it's pretty good
+
+---
+
+#### `openpyxl`
+
+* This is a library used to read/write Excel 2007+ files (xlsx)
+* An alternative could have been pandas, but it's a bigger library
+* It enables reading an excel document as a python object
+
+---
+
+### Basic `openpyxl` usage
+
+```python
+wb = load_workbook('./hashtag.xlsx')
+sheet = wb['hashtag']
+
+print(sheet.rows)
+for row in sheet.rows:
+    print(row)
+    for cell in row:
+        print(cell.value, end=';')
+```
+
+Note:
+
+* To load a sheet, it's easy.
+* First you have to open the file using `load_workbook`.
+* Then you can read the sheet using `workbook['<sheetname>']`.
+* The sheet will have an object called `rows`.
+* This is called a `generator` object, as you can't read it directly
+, you have to iterate over it.
+* This is done for performance reasons, as you don't always 
+want to load the entire file in memory.
+* Every row is a actually a list of cells
+* We can iterate over them and find their values
+
+---
+
+### Getting the tweets
+
+```python
+def get_tweets():
+    wb = load_workbook(EXCEL_FILE)
+    sheet = wb[EXCEL_SHEET]
+
+    tweets = []
+    header = {}
+    for i, row in enumerate(sheet.rows):
+        if i == 0:
+            for j, cell in enumerate(row):
+                header[j] = cell.value
+        else:
+            tweet = {}
+            for j, cell in enumerate(row):
+                tweet[header[j]] = cell.value
+            tweets.append(tweet)
+
+    return tweets
+```
+
+@[2-3](Load the workbook)
+@[5-6](Initialize the header as an empty dict, and the tweets as an empty list)
+@[7](Iterate over the rows)
+@[8-10](Generate the header object - key will be an integer - the column, value the header name)
+@[11-15](Generate the tweet dictionaries)
+
+Note:
+
+* What does this code do?
+* It reads an file with a header and rows
+* And generates a list of dictionaries
+* `enumerate` is used to iterate over a list and generate two variables:
+  * the index (from 0 to len(list))
+  * the value
+  * this way we don't need to keep track of the index ourselves
+
+---
+
+### Sending the tweets
+
+
+```python
+def send_tweets():
+    tweets = get_tweets()
+    print('Tweets to be sent')
+    pprint(tweets)
+    
+    print('Starting to send tweets')
+    for tweet in tweets:
+        update = '{} {}'.format(tweet['message'], tweet['hashtag'])
+        print(f'Sending update `{update}`')
+        try:
+            status = api.PostUpdate(update)
+            print('Update sent successfully')
+        except TwitterError as e:
+            print('Failed {}'.format(e))
+```
+@[2](Load the tweets)
+@[3-4](Print the tweets, prettified)
+@[6-7](Start sending the tweets. Iterate over.)
+@[8](Generate the update message. This way we can print it and send it 😉)
+@[9](Log that we try to send the update)
+@[10-15](Try to send the tweet, but catch the errors)
+
+Note:
+
+* A lot of printing, but the core functionality can be resumed to
+```python
+api.PostUpdate(update)
+```
+
+---
+
+### Homework
+
+1. Try to also send mails to yourself. (For Gmail you can use this [link](http://stackabuse.com/how-to-send-emails-with-gmail-using-python/))
+2. Read the documentation about python [decorators](https://realpython.com/primer-on-python-decorators/)
+
+
+---
+
+
