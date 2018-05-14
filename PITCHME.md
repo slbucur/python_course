@@ -310,11 +310,11 @@ experiment with them
 * An interactive way to run code in the browser
 * Very useful for data analysis and one-off code snippets
 * Let's create one now:
-![jupyter-1](./assets/md/assets/jupyterlab-1.png)
+![jupyter-1](assets/jupyterlab-1.png)
 ---
 
 * Copy paste the code in the first cell
-![jupyter-1](./assets/md/assets/jupyterlab-notebook.png)
+![jupyter-1](assets/jupyterlab-notebook.png)
 
 * Run with `Ctrl + Enter` or the ▶️ button above
 
@@ -1452,7 +1452,7 @@ class MiniInteger():
 
 mini_int = MiniInteger()
 for i in range(4):
-    print mini_int.increment()
+    mini_int.increment()
 
 ```
 
@@ -1709,7 +1709,7 @@ sleep(10)
 * From python's point of view, directories that have
 an `__init__.py` file in them are considered modules
 
----„
+---
 
 ### Importing from your own modules
 
