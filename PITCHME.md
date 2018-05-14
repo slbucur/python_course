@@ -1985,12 +1985,45 @@ api.PostUpdate(update)
 
 ---
 
-### Homework
+### Homework 3
 
 1. Try to also send mails to yourself. (For Gmail you can use this [link](http://stackabuse.com/how-to-send-emails-with-gmail-using-python/))
 2. Read the documentation about python [decorators](https://realpython.com/primer-on-python-decorators/)
+3. Create an account on github.com, if you don't have one already.
+   As a developer you'll find it quite useful.
+4. How did Homework 1 go? Ask us question now.
 
 
 ---
+
+### Next course
+
+1. In the next course we'll make a simple API using Flask.
+2. Also we'll some github fundamentals, like forking a 
+   project and backing up your code.
+3. Beyond that we'll cover one of the these topic, by popular vote
+
+Go to https://doodle.com/poll/wkmw7ayp3wtk97rv
+
+---
+
+
+### Topics
+
+The first few topics chosen will be discussed in the next course.
+
+1. Simple REST API in Django
+2. Building a bot for Telegram (or facebook messenger)
+3. Data Analysis with Python, Numpy and Pandas (generating charts and insights from data)
+4. Querying relational databases
+5. Regex in Python
+6. Docker for Python applications
+7. Image generation (art) with Python
+8. Making a video game with pygame
+9. Generating PDF files with Python
+10. Generating .exe files from python applications with PyInstaller
+11. Basic image analysis (Computer vision)
+
+We can discuss other topics now, and add them to the poll.
 
 
