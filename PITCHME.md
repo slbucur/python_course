@@ -2012,18 +2012,20 @@ Go to https://doodle.com/poll/wkmw7ayp3wtk97rv
 
 The first few topics chosen will be discussed in the next course.
 
-1. Simple REST API in Django
-2. Building a bot for Telegram (or facebook messenger)
-3. Data Analysis with Python, Numpy and Pandas (generating charts and insights from data)
-4. Querying relational databases
-5. Regex in Python
-6. Docker for Python applications
-7. Image generation (art) with Python
-8. Making a video game with pygame
-9. Generating PDF files with Python
-10. Generating .exe files from python applications with PyInstaller
-11. Basic image analysis (Computer vision)
+* Simple REST API in Django
+* Building a bot for Telegram (or facebook messenger)
+* Data Analysis with Python, Numpy and Pandas (generating charts and insights from data)
+* Querying relational databases
+* Regex in Python
+* Docker for Python applications
 
-We can discuss other topics now, and add them to the poll.
+---
 
 
+* Image generation (art) with Python
+* Making a video game with pygame
+* Generating PDF files with Python
+* Generating .exe files from python applications with PyInstaller
+* Basic image analysis (Computer vision)
+
+We can discuss other topics now, and add them to the poll. Happy choices 😊!
