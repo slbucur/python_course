@@ -1132,14 +1132,14 @@ print(get_fruit_name('🍏'))
 ```python
 def send_tweets():
     tweets = [
-        {'message': 'I love exotic fruits', 'hastag': '#mango'},
-        {'message': 'Local foods are the best', 'hastag': '#pear'},
-        {'message': 'Why not vegetables', 'hastag': '#celery'}
+        {'message': 'I love exotic fruits', 'hashtag': '#mango'},
+        {'message': 'Local foods are the best', 'hashtag': '#pear'},
+        {'message': 'Why not vegetables', 'hashtag': '#celery'}
     ]
 
     for tweet in tweets:
         print('Sending tweet:')
-        print('{} {}'.format(tweet['messsage'], tweet['hashtag']))
+        print('{} {}'.format(tweet['message'], tweet['hashtag']))
 
 send_tweets()
 ```
@@ -1771,12 +1771,18 @@ Note:
 ### Hashtag version 2
 
 ```python
-from twitter import Api
+from twitter import Api, TwitterError
+from openpyxl import load_workbook
+from pprint import pprint
+
+EXCEL_FILE = './hashtag.xlsx'
+EXCEL_SHEET = 'hashtag'
+
 api = Api(
-    consumer_key='zbSYdYSCgBp4AsobvCTFUEEHs',
-    consumer_secret='nmxH708nLYq6ajeEEGuM0GfuZ04QtU10xRrgBYWaSOZHDKbD9g',
-    access_token_key='994947930971885569-3PnJ7T76W85VaFke5qAijk9kDufVrz4',
-    access_token_secret='P0eq8EKTBD3Bn4OTOHXJ5viYp7D8IBiBlLy9t4TuVRIlU'
+    consumer_key='uV8NLoJBkI46NPiHZJgvJY2PP',
+    consumer_secret='4gtGFn2QySlxnyFkdcnpjXy5a8rVRyBdaoJcXiJordEbx0UpXk',
+    access_token_key='994947930971885569-rZGjnP0IhF4UbPHHQjKlr2l2eI4m4iM',
+    access_token_secret='eAdMlpqzmZApHAVHa1WRziIQw0U5KP62AhfyOdasyUwiz'
 )
 
 def get_tweets():
@@ -1799,17 +1805,22 @@ def get_tweets():
 
 def send_tweets():
     tweets = get_tweets()
+    print('Tweets to be sent')
+    pprint(tweets)
+    
+    print('Starting to send tweets')
     for tweet in tweets:
         update = '{} {}'.format(tweet['message'], tweet['hashtag'])
-        print(f'Sending update {update}')
-        status = api.PostUpdate(update)
-        if status.code == 200:
+        print(f'Sending update `{update}`')
+        try:
+            status = api.PostUpdate(update)
             print('Update sent successfully')
+        except TwitterError as e:
+            print('Failed {}'.format(e))
 
 send_tweets()
 
 ```
 
-
-
+---
 
