@@ -1838,7 +1838,7 @@ send_tweets()
 
 ---
 
-<iframe src="https://python-twitter.readthedocs.io/en/latest/" style="width:75vw; height:50vh">
+
 
 ---
 
