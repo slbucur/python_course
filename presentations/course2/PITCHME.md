@@ -623,10 +623,6 @@ send_tweets()
 
 ---
 
-<iframe src="https://python-twitter.readthedocs.io/en/latest/" style="width:75vw; height:50vh">
-
----
-
 To use the twitter API, you will need 3 things:
 * to import the library 
 ```python
