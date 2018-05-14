@@ -280,7 +280,7 @@ Go to https://github.com/slbucur/python_course.
 
 Here you should see a launcher button
 
-![launch](http://mybinder.org/badge.svg)
+![launch](https://mybinder.org/badge.svg)
 
 Click on it :).
 
