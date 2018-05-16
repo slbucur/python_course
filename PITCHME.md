@@ -100,7 +100,12 @@ Over the last decades, the goal of computing was to create
 abstractions.
 A modern computer encapsulates data and instructions through many
 abstractions.
-This
+This is a pattern in computing:
+* something is regarded as too complex to work with directly (assembly)
+* an abstraction is created (programming languages)
+* people start using the abstraction which allows more complex systems
+* another abstraction is created (scripting languages)
+* the cycle repeats
 
 ---
 
@@ -173,7 +178,7 @@ puts('Hello world')
 Note:
 
 As you can see, python values brevity (small instructions), but also
- understandability.
+ clarity.
 
 The java version is obviously very long, though you can pretty much
 guess that `System.out.println` prints to the console.
@@ -183,7 +188,7 @@ Ruby values brevity, but it's not immediate what `puts` means.
 
 This is not to say that the design of these other languages is worse,
 they all have their values and guidelines, but I think `Python` really
-hits it's goals with ease of use and understandability
+hits its goals with ease of use and clarity
 most of the time.
 
 ---
@@ -192,7 +197,8 @@ most of the time.
 
 - simple, easy to use language
  - doesn't get in your way
-- vast (huge) amount of good quality packages
+- huge amount of open source libraries
+ - database access, web frameworks, data science tools, etc.
  - no need to reinvent the wheel
 - ease of installation
  - available by default on most Linux Distros
@@ -224,7 +230,7 @@ high performance libraries (numpy)
 - pypy (a custom python interpreter) is > 8 times faster than standard
 python
 Concurrency:
-- historically hard to create use more than 1 CPU
+- historically hard to use more than 1 CPU core
 - got much better in the last decade
 - other languages had (and some still have) the same issues
 Operational:
@@ -267,8 +273,8 @@ Quite a lot going on, let's take it one by one.
 
 @[1](A list holding the tweets)
 @[2](A dictionary)
-@[6](Take an item for element of the list)
-@[7](Print the resulting tweet)
+@[7](Take an item for each element of the list)
+@[8-9](Print the resulting tweet)
 
 ---
 
@@ -358,13 +364,41 @@ print(a // b)
 
 ---
 
+### Python 2
+
+* For python 2, dividing two integers is integer division.
+* You have to cast one of the numbers to float.
+
+```python
+print(1 / 2) # 0
+
+print(float(1) / 2) # 0.5
+```
+
+* But don't use python 2, it will be out on 1 January 2020 😀.
+
+---
+
+### 2 vs 3
+
+* Right now python has two active versions, 2 and 3.
+* Python 3 has many improvements in speed, syntax and  features.
+* Unfortunately 3 is not entirely compatible with 2
+* A few years ago, Python 2 vs Python 3 was still a debate.
+* Now it's clear, Python 3 has won, and almost all active 
+libraries support it.
+* So unless you need to support an old application developed in Python 2,
+use Python 3
+
+---
+
 - tuple
 
 A sequence of things. Once initialized it can't change: `immutable`.
 
 ```python
 fruits = ('mango', 'banana', 'apple')
-print(','.join(fruits)) # a basket of fruits (actually a string)
+print(', '.join(fruits)) # a basket of fruits (actually a string)
 
 fruits[0] = 'pear' # this will error out
 ```
@@ -381,7 +415,7 @@ Also a sequence of things. A list can change
 fruits = ['mango', 'banana', 'apple', 'monkey']
 
 # what's that monkey doing there?
-delete fruits[3] # as you can see, python is 0 indexed
+del fruits[3] # as you can see, python is 0 indexed
 
 fruits.append['pear']
 print(','.join(fruits)) # a basket of fruits (actually a string)
