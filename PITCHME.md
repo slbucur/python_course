@@ -940,6 +940,7 @@ index = 0
 while index < len(fruits):
     fruit = fruits[index]
     print('I like the fruit named {}'.format(fruit))
+    index += 1
 
 # with for
 for fruit in fruits:
@@ -991,6 +992,7 @@ actual_fruits = [
     for fruit in fruits
     if fruit not in not_actually_fruits
 ]
+print(actual_fruits)
 ```
 
 Note:
@@ -1082,7 +1084,7 @@ for fruit in fruits:
 
 ```python
 def check_fruit(fruit, bad_fruits=('🍺', '🍷')):
-    if fruit not in :
+    if fruit not in bad_fruits:
         print(f'{fruit} is a fruit')
     else:
         print(f'{fruit} is not a fruit')
@@ -1120,7 +1122,6 @@ def check_fruit(fruit, bad_fruits=('🍺', '🍷', '🌎')):
 
 fruits = ['🍌', '🍓', '🍏', '🍐', '🍺', '🍷', '🌎']
 
-# which is right?
 for fruit in fruits:
     is_fruit = check_fruit(fruit)
     if is_fruit:
@@ -1444,15 +1445,15 @@ class Animal():
     def __init__(self, sound):
         self.sound = sound
 
-    def make_sound():
-        print(sound)
+    def make_sound(self):
+        print(self.sound)
 
 class Cat(Animal):
     def __init__(self):
         super().__init__('Meow !')
 
 class Dog(Animal):
-    def __init(self):
+    def __init__(self):
         super().__init__('Bark !')
 
 cat = Cat()
@@ -1480,9 +1481,9 @@ Their sounds are different though:
 class MiniInteger():
     def __init__(self):
         self.state = 0
-    def increment():
+    def increment(self):
         self.state += 1
-        print(state)
+        print(self.state)
 
 mini_int = MiniInteger()
 for i in range(4):
@@ -1497,6 +1498,7 @@ It can only increment.
 
 When we initialize it with MiniInteger(), the state
 initializes with 0.
+
 Then we can increase that state with 1 using 
 the MiniInteger.increment() function
 
@@ -1724,7 +1726,7 @@ sleep(10)
 * usually not recommended
 
 ```python
-import * from time
+from time import *
 sleep(10)
 ```
 
@@ -1897,7 +1899,7 @@ api.PostUpdate('Update text')
 
 ---
 
-### Secrets
+#### Twitter API Secrets
 
 * To get the secrets, you'll need to set up a new App in twitter (and a user, maybe?)
 * Don't worry, one is already set up for you, [here](https://apps.twitter.com/app/15218341/keys)
