@@ -5,7 +5,8 @@
 The internal python course held @Cegeka.
 
 In this repository you will find:
-* a presentation, available at [gitpitch](https://gitpitch.com/slbucur/python_course/master?n=true#/)
+* a presentation, available at [gitpitch - with notes](https://gitpitch.com/slbucur/python_course/master?n=true#/) or
+[gitpitch - without notes](https://gitpitch.com/slbucur/python_course/master#/) 
   * you can download it at the link, or see the text format inside the `PITCHME.md` file
 * the jupyer notebooks in the `code` folder, as `.ipynb` files
 * the python files in the `code` folder, as `.py` files
