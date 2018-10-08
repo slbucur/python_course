@@ -46,15 +46,15 @@ using the twitter API
 ---
 
 - Steps:
-  - Start with a hardcoded list and print it in the terminal (Course 1)
-  - Read the input from excel and use the twitter API (Course 2)
-  - Create a web server that does this action when requested (Course 3)
+  - Start with a hardcoded list and print it in the terminal (Part 1)
+  - Read the input from excel and use the twitter API (Part 2)
+  - Create a web server that does this action when requested (Part 3)
 
 In the last course we'll have a hackaton with your own ideas.
 
 ---
 
-## Course 1
+## Part 1
 ### Introduction to programming and Python
 
 
@@ -1181,74 +1181,7 @@ send_tweets()
 
 Tell me if you have questions about it ❓.
 
----
-
-### Homework
-
-Next time we'll install python and external libraries using pip.
-Try to do it yourselves.
-
-* Go to [python.org](https://www.python.org/downloads/release/python-365/)
-* Download the Windows executable [installer](https://www.python.org/ftp/python/3.6.5/python-3.6.5-amd64.exe)
-* This will install `python` and `pip`
-* Install [cmder](http://cmder.net/) - full version (much better than cmd)
-* Open cmder as Administrator
----
-
-* Go to your Desktop
-```bash
-cd C:\Users\<your_user_name>\Desktop
-```
-* Make a projects directory, and a python_course folder
-```bash
-mkdir projects
-cd projects
-mkdir python_course
-cd python_course
-```
-
----
-
-* Install `pipenv`
-```bash
-pip install pipenv
-```
-* Install `jupyterlab`
-```bash
-pipenv install jupyterlab
-pipenv shell
-```
-
-* Run it
-```bash
-jupyter lab
-```
-
-Bravo 🐍!
-
-(If it didn't work, don't worry, we'll cover everything next time).
-
----
-
-### Homework 2
-
-* Try to do the python tutorial on [python.org](https://docs.python.org/3/tutorial/)
-* To learn something, make it a daily habit:
-  * If you struggle with programming concepts, try a game like Coding Planets
-  (On [Android](https://play.google.com/store/apps/details?id=com.material.design.codingplanet&hl=en))
-  or The Human Resource Machine (Windows, IOS and Android)
-  * For daily questions, **SoloLearn** and **Enky**
-
----
-
-* If you're really determined, try the:
- [Python Bootcamp](https://www.udemy.com/complete-python-bootcamp/) on Udemy
-  * You should be able to get it at 10$
-  * You should probably do it after this course 😊
-
----
-
-## Course 2
+## Part 2
 ### Using external libraries
 
 ---
@@ -2021,17 +1954,6 @@ api.PostUpdate(update)
 
 ---
 
-### Homework 3
-
-1. Try to also send mails to yourself. (For Gmail you can use this [link](http://stackabuse.com/how-to-send-emails-with-gmail-using-python/))
-2. Read the documentation about python [decorators](https://realpython.com/primer-on-python-decorators/)
-3. Create an account on github.com, if you don't have one already.
-   As a developer you'll find it quite useful.
-4. How did Homework 1 go? Ask us question now.
-
-
----
-
 ### Next course
 
 1. In the next course we'll make a simple API using Flask.
@@ -2065,3 +1987,86 @@ The first few topics chosen will be discussed in the next course.
 * Basic image analysis (Computer vision)
 
 We can discuss other topics now, and add them to the poll. Happy choices 😊!
+
+---
+
+## Homeworks
+
+---
+### Homework 0
+
+* Try to do the python tutorial on [python.org](https://docs.python.org/3/tutorial/)
+* To learn something, make it a daily habit:
+  * If you struggle with programming concepts, try a game like Coding Planets
+  (On [Android](https://play.google.com/store/apps/details?id=com.material.design.codingplanet&hl=en))
+  or The Human Resource Machine (Windows, IOS and Android)
+  * For daily questions, **SoloLearn** and **Enky**
+
+---
+
+### Homework 1
+
+Next time we'll install python and external libraries using pip.
+Try to do it yourselves.
+
+* Go to [python.org](https://www.python.org/downloads/release/python-365/)
+* Download the Windows executable [installer](https://www.python.org/ftp/python/3.6.5/python-3.6.5-amd64.exe)
+* This will install `python` and `pip`
+* Install [cmder](http://cmder.net/) - full version (much better than cmd)
+* Open cmder as Administrator
+---
+
+* Go to your Desktop
+```bash
+cd C:\Users\<your_user_name>\Desktop
+```
+* Make a projects directory, and a python_course folder
+```bash
+mkdir projects
+cd projects
+mkdir python_course
+cd python_course
+```
+
+---
+
+* Install `pipenv`
+```bash
+pip install pipenv
+```
+* Install `jupyterlab`
+```bash
+pipenv install jupyterlab
+pipenv shell
+```
+
+* Run it
+```bash
+jupyter lab
+```
+
+Bravo 🐍!
+
+(If it didn't work, don't worry, we'll cover everything next time).
+
+---
+
+---
+
+### Homework 2
+
+1. Try to also send mails to yourself. (For Gmail you can use this [link](http://stackabuse.com/how-to-send-emails-with-gmail-using-python/))
+2. Read the documentation about python [decorators](https://realpython.com/primer-on-python-decorators/)
+3. Create an account on github.com, if you don't have one already.
+   As a developer you'll find it quite useful.
+
+
+---
+
+### Homework 3
+
+* As a follow up to this course, you can try:
+ [Python Bootcamp](https://www.udemy.com/complete-python-bootcamp/) on Udemy
+  * You should be able to get it at 10$
+  * Have fun! 😊
+
