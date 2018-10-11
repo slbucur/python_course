@@ -147,7 +147,7 @@ But with this base, it can perform any computation.
 
 ### Python
 
-Python is general purpose programming language with the goals of:
+Python is a general purpose programming language with the goals of:
 - ease of use
 - readability
 - ergonomics
@@ -206,8 +206,8 @@ most of the time.
 
 ---
 
-Useful for a many development paths:
- - Scripting (one off script or batch jobs)
+Useful for many development paths:
+ - Scripting (one-off script or batch jobs)
  - Web development (Django, Flask)
  - Data science (Machine learning, Data processing, Data analysis)
  - Security (hacking, whitehat or not)
@@ -305,9 +305,9 @@ experiment with them
 
 ### Binder.org
 
-* An platform that lets you create Jupyterlab instances in the cloud, for free
+* A platform that lets you create Jupyterlab instances in the cloud, for free
 * The instances are limited in terms of compute power, but it's nice for quick experiments
-* In the next course we'll learn how to do run Jupyterlab locally
+* In the next course we'll learn how to run Jupyterlab locally
 
 ---
 
@@ -385,7 +385,7 @@ print(float(1) / 2) # 0.5
 * Python 3 has many improvements in speed, syntax and  features.
 * Unfortunately 3 is not entirely compatible with 2
 * A few years ago, Python 2 vs Python 3 was still a debate.
-* Now it's clear, Python 3 has won, and almost all active 
+* Now it's clear, Python 3 has won, and almost all active
 libraries support it.
 * So unless you need to support an old application developed in Python 2,
 use Python 3
@@ -462,7 +462,7 @@ Everything in python is an object:
 
 _But what is an object?_
 
-A structure with that holds **data** and has **properties**
+A structure that holds **data** and has **properties**
 
 Note:
 Yes, it's that simple. We're not going into Object Oriented Programming
@@ -470,7 +470,7 @@ just yet.
 
 ---
 
-Let's take a basic example, and Integer.
+Let's take a basic example, an Integer.
 
 It holds a value, a natural number:
 * 0, 1, 2, 3 ... n
@@ -1233,7 +1233,7 @@ for every project
 * Pipenv is a library that makes it very easy to work with virtual
 environments
 
-* create a new directory an change the directory into it
+* create a new directory and change the directory into it
 ```bash
 mkdir project_name
 cd project_name
@@ -1270,14 +1270,14 @@ which python
 * Let's look at them for a little
 
 Note:
-The Pipfile is straightforward, with just two dependencies: 
+The Pipfile is straightforward, with just two dependencies:
 * jupyterlab
 * requests
 
-If we look in the Pipfile.lock, thogh, we can see all 
+If we look in the Pipfile.lock, thogh, we can see all
 the complexity hidden from us.
 
-Jupyterlab depends on many other libraries, 
+Jupyterlab depends on many other libraries,
 and they are all here.
 
 ---
@@ -1432,7 +1432,7 @@ It can only increment.
 When we initialize it with MiniInteger(), the state
 initializes with 0.
 
-Then we can increase that state with 1 using 
+Then we can increase that state with 1 using
 the MiniInteger.increment() function
 
 ---
@@ -1440,7 +1440,7 @@ the MiniInteger.increment() function
 ### OOP - Conclusions
 
 * OOP is used extensively throughout python
-* It's not usually necessary to create your 
+* It's not usually necessary to create your
 own hierarchies
 * But it's important to know for using other libraries
 
@@ -1481,7 +1481,7 @@ Traceback (most recent call last)
       2 while True:
 ----> 3     sleep(1)
 
-KeyboardInterrupt: 
+KeyboardInterrupt:
 ```
 
 * Under normal python behavior, if an exception is not caught
@@ -1507,7 +1507,7 @@ for divisor in divisors:
 ZeroDivisionError
 Traceback (most recent call last)
 <ipython-input-8-e92e33772d17> in <module>()
-      3 
+      3
       4 for divisor in divisors:
 ----> 5     print(f'{nr} / {divisor} = {nr/divisor}')
 
@@ -1533,7 +1533,7 @@ Note:
 This works similar to an **if** block.
 
 Also notice the quote (`'`) escaping with `\`.
-Since the string is made with single quotes, we need to 
+Since the string is made with single quotes, we need to
 escape the quotes inside the string.
 An alternative would have been `f"Can't divide {nr} by 0"`
 
@@ -1596,10 +1596,10 @@ for fruit in fruits:
 ```
 
 Note:
-The `pass` keyword denotes that we don't want anything 
+The `pass` keyword denotes that we don't want anything
 but inheriting the class.
 
-Try to catch the exception so that the program 
+Try to catch the exception so that the program
 doesn't stop.
 
 ---
@@ -1607,7 +1607,7 @@ doesn't stop.
 ### The `pass` keyword
 
 * The `pass` keyword is used to not do anything.
-* It can be used a placeholder until actual code will
+* It can be used as a placeholder until actual code will
 be written
 
 ```python
@@ -1649,7 +1649,7 @@ time.sleep(10)
 ```python
 from time import sleep
 print('Sleeping 10 seconds')
-sleep(10) 
+sleep(10)
 
 ```
 
@@ -1776,7 +1776,7 @@ def send_tweets():
     tweets = get_tweets()
     print('Tweets to be sent')
     pprint(tweets)
-    
+
     print('Starting to send tweets')
     for tweet in tweets:
         update = '{} {}'.format(tweet['message'], tweet['hashtag'])
@@ -1812,7 +1812,7 @@ send_tweets()
 ---
 
 To use the twitter API, you will need 3 things:
-* to import the library 
+* to import the library
 ```python
 import twitter
 ```
@@ -1837,8 +1837,8 @@ api.PostUpdate('Update text')
 * To get the secrets, you'll need to set up a new App in twitter (and a user, maybe?)
 * Don't worry, one is already set up for you, [here](https://apps.twitter.com/app/15218341/keys)
   * The user is * Sally WaffleLover*, we'll give you the credentials during the course 😉
-* If you want it for your own twitter user, follow this python-twitter 
-[page](https://python-twitter.readthedocs.io/en/latest/getting_started.html), 
+* If you want it for your own twitter user, follow this python-twitter
+[page](https://python-twitter.readthedocs.io/en/latest/getting_started.html),
 it's pretty good
 
 ---
@@ -1872,9 +1872,9 @@ Note:
 * The sheet will have an object called `rows`.
 * This is called a `generator` object, as you can't read it directly
 , you have to iterate over it.
-* This is done for performance reasons, as you don't always 
+* This is done for performance reasons, as you don't always
 want to load the entire file in memory.
-* Every row is a actually a list of cells
+* Every row is actually a list of cells
 * We can iterate over them and find their values
 
 ---
@@ -1910,7 +1910,7 @@ def get_tweets():
 Note:
 
 * What does this code do?
-* It reads an file with a header and rows
+* It reads a file with a header and rows
 * And generates a list of dictionaries
 * `enumerate` is used to iterate over a list and generate two variables:
   * the index (from 0 to len(list))
@@ -1927,7 +1927,7 @@ def send_tweets():
     tweets = get_tweets()
     print('Tweets to be sent')
     pprint(tweets)
-    
+
     print('Starting to send tweets')
     for tweet in tweets:
         update = '{} {}'.format(tweet['message'], tweet['hashtag'])
@@ -1957,7 +1957,7 @@ api.PostUpdate(update)
 ### Next course
 
 1. In the next course we'll make a simple API using Flask.
-2. Also we'll some github fundamentals, like forking a 
+2. Also we'll look at some Github fundamentals, like forking a
    project and backing up your code.
 3. Beyond that we'll cover one of the these topic, by popular vote
 
@@ -2069,4 +2069,3 @@ Bravo 🐍!
  [Python Bootcamp](https://www.udemy.com/complete-python-bootcamp/) on Udemy
   * You should be able to get it at 10$
   * Have fun! 😊
-
