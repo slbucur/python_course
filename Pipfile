@@ -8,5 +8,6 @@ jupyterlab = "*"
 requests = "*"
 python-twitter = "*"
 openpyxl = "*"
+"psycopg2" = "*"
 
 [dev-packages]
