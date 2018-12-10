@@ -44,7 +44,10 @@ CREATE TABLE animal(
 ## Inserting into a table
 
 ```sql
-INSERT INTO animal(name, race, emoji) VALUES ('panda', 'mammal', 'pandas like lavandas'), ('iguana', 'lizard', 'iguana likes your momma');
+INSERT INTO animal(name, race, emoji) 
+VALUES 
+    ('panda', 'mammal', 'pandas like lavandas'), 
+    ('iguana', 'lizard', 'iguana likes your momma');
 ```
 
 ---
@@ -60,7 +63,9 @@ SELECT * FROM animal;
 ## Update
 
 ```sql
-UPDATE animal SET quote = 'iguana meets Joanna' where name='iguana';
+UPDATE animal 
+SET quote = 'iguana meets Joanna' 
+WHERE name='iguana';
 ```
 
 ---
@@ -68,7 +73,7 @@ UPDATE animal SET quote = 'iguana meets Joanna' where name='iguana';
 ## DELETE
 
 ```sql
-DELETE FROM animal where name='panda';
+DELETE FROM animal WHERE name='panda';
 ```
 
 ---
@@ -88,6 +93,11 @@ connection = sqlite3.connect('test.db')
 # then we need a cursor
 cursor = connection.cursor()
 
+```
+
+---
+
+```python
 # for CREATE/INSERT/UPDATE/DELETE
 # only execute is enough
 cursor.execute("""
@@ -99,6 +109,11 @@ cursor.execute("""
     );
 """)
 
+```
+
+---
+
+```python
 # for SELECT
 # first execute
 cursor.execute("SELECT * FROM sqlite_master")
