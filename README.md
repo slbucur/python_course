@@ -11,6 +11,10 @@ In this repository you will find:
 * the jupyer notebooks in the `code` folder, as `.ipynb` files
 * the python files in the `code` folder, as `.py` files
 
+## On demand presentations
+
+* [Databases](https://gitpitch.com/slbucur/python_course/master?p=presentations/database#/)
+
 ## Cloud installation
 
 We have set up a cloud installation at binder.com .
