@@ -9,5 +9,10 @@ requests = "*"
 python-twitter = "*"
 openpyxl = "*"
 "psycopg2" = "*"
+pandas = "*"
+seaborn = "*"
+matplotlib = "*"
+plotly = "*"
+
 
 [dev-packages]
